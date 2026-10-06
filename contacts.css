@@ -1,0 +1,24 @@
+button.button-outline{color:var(--text)}
+html.contact-dialog-open{overflow:hidden;scrollbar-gutter:stable}
+.contact-dialog{width:min(520px,calc(100% - 32px));max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);margin:auto;padding:30px;border:1px solid #c6ee9945;border-radius:16px;background:radial-gradient(ellipse at top right,#34472b50,transparent 65%),var(--surface);color:var(--text);font-family:var(--font);box-shadow:0 25px 100px #0007;overflow-y:auto;overscroll-behavior:contain}
+.contact-dialog::backdrop{background:#081009bd;backdrop-filter:blur(5px)}
+.contact-dialog[open]{animation:contact-dialog-in .2s ease-out}
+.contact-dialog .eyebrow{font-size:11px;margin:0 45px 14px 0}
+.contact-dialog h2{font-size:32px;line-height:1.25;margin:0 0 14px}
+.contact-dialog-description{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+.contact-dialog-close{position:absolute;top:18px;right:18px;width:44px;height:44px;display:grid;place-items:center;border:1px solid #ffffff24;border-radius:8px;background:transparent;color:var(--text);transition:background .2s,border-color .2s}
+.contact-dialog-close:hover{background:var(--surface-light);border-color:#c6ee9970}
+.contact-dialog-close svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.contact-dialog .contact-links{gap:10px}
+.contact-dialog .contact-card{min-height:76px;padding:14px 16px;gap:14px}
+.contact-dialog .contact-card:hover{transform:none}
+.contact-dialog .messenger-icon{width:38px;height:38px}
+.contact-dialog .contact-action{display:block;font-size:12px}
+.contact-dialog-phones{display:grid;gap:17px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.contact-dialog-phones .phone-label{margin-bottom:2px}
+.contact-dialog-phones .phone-link{font-size:20px;line-height:1.5}
+.contact-dialog-phones .phone-caption{font-size:12px;margin-top:2px}
+@keyframes contact-dialog-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:620px){.contact-dialog{padding:24px 20px}.contact-dialog h2{font-size:29px}.contact-dialog .eyebrow{font-size:10px}.contact-dialog-close{top:12px;right:12px}.contact-dialog .contact-card{padding:13px 12px;gap:11px}.contact-dialog .contact-card strong{font-size:15px}.contact-dialog .contact-card div>span{font-size:11px}.contact-dialog .contact-action{font-size:11px}.contact-dialog-description{font-size:13px}.contact-dialog-phones{gap:15px}}
+@media(max-width:360px){.contact-dialog .contact-action{display:none}.contact-dialog h2{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.contact-dialog[open]{animation:none}.contact-dialog-close{transition:none}}
